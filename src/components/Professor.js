@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import requisicao from '../Api'
+import '../style/Geral.css'
 
-import './custom.css'
-import requisicao from './Api'
-
-export default class App extends Component {
+export default class Professor extends Component {
     state = {
         dados: []
     }
 
     //chamado imediatamente após alguma atualização ocorrer
     async componentDidMount() {
-        const retorno = await requisicao.get('');
+        const retorno = await requisicao.get('professores');
         this.setState({ dados: retorno.data });
     }
 
@@ -18,7 +17,6 @@ export default class App extends Component {
         const { dados } = this.state;
         return (
             <div id="lista">
-                {console.log(dados)}
                 {dados.map(usr => (
                     <span id={usr.Id} key={usr.Id}>
                         <div className="nome">Nome: {usr.Nome}</div>
@@ -31,6 +29,7 @@ export default class App extends Component {
                 )
                 )}
             </div>
+            
         );
     }
 

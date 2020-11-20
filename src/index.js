@@ -1,18 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
+import Professor from './components/Professor';
+import NavMenu from './components/NavMenu';
 
 ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>,
-  rootElement);
+  <NavMenu />, document.getElementById('header-nav'));
 
-registerServiceWorker();
-
+ReactDOM.render(
+  <Professor />, document.getElementById('professor'));
