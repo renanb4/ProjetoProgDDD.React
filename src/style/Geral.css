@@ -1,19 +1,11 @@
-.nome {
-  color: #006eed;
-}
-
 #lista {
-  padding-top: 80px;
-  padding-left: 5px;
-}
-
-#sobre {
-  padding-top: 50px;
+  padding-top: 100px;
   text-align: center;
 }
 
-#botao {
-  padding-top: 80px;
+#sobre {
+  padding-top: 40px;
+  text-align: center;
 }
 
 body {
