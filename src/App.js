@@ -8,22 +8,25 @@ export default class App extends Component {
         dados: []
     }
 
-    //chamado imediatamente após alguma atualização ocorrer
+    //chamado imediatamente apÃ³s alguma atualizaÃ§Ã£o ocorrer
     async componentDidMount() {
-        const retorno = await requisicao.get("");
-        this.setState({ dados: retorno.data.photos });
+        const retorno = await requisicao.get('');
+        this.setState({ dados: retorno.data });
     }
 
     render() {
         const { dados } = this.state;
         return (
             <div id="lista">
-                <span>dados</span>
                 {console.log(dados)}
-                {dados.map(foto => (
-                    <span>
-                        <div id={foto.id}>Data: {foto.earth_date}</div>
-                        <img src={foto.img_src} />
+                {dados.map(usr => (
+                    <span id={usr.Id} key={usr.Id}>
+                        <div className="nome">Nome: {usr.Nome}</div>
+                        <div className="email">E-Mail: {usr.Email}</div>
+                        <div className="nascimento">Nascimento: {usr.Nascimento}</div>
+                        <div className="ra">R.A: {usr.Ra}</div>
+                        <div className="senha">Senha: {usr.Senha}</div>
+                        <hr></hr>
                     </span>
                 )
                 )}
