@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .nome {
   color: #006eed;
 }
@@ -12,11 +14,22 @@
   text-align: center;
 }
 
-#botao {
-  padding-top: 80px;
-}
-
 body {
   color: #FFF;
   background-color: rgb(17, 17, 17);
+  font-family: 'Roboto', sans-serif;
+}
+
+#NomeTabela {
+  color:  rgb(158, 159, 255);
+  font-weight: bold;
+}
+
+#NomeProg {
+  color: lightgray;
+}
+
+#HeaderTable {
+  color: lightgray;
+  background-color: rgb(46, 32, 71)
 }
