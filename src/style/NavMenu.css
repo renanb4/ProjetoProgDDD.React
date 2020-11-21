@@ -11,3 +11,11 @@
 .button {
   color: #FFF;
 }
+
+#buttons1 :hover {
+  color: rgb(158, 159, 255);
+}
+
+#buttons2 :hover {
+  color: rgb(158, 159, 255);
+}

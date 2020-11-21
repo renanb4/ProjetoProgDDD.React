@@ -5,6 +5,7 @@ import Sobre from './Sobre';
 import { Navbar, NavbarBrand, Nav, NavItem, Button } from 'reactstrap';
 import { unmountComponentAtNode } from "react-dom";
 import '../style/NavMenu.css';
+import '../style/Geral.css';
 
 class NavMenu extends Component {
   constructor() {
@@ -27,12 +28,12 @@ class NavMenu extends Component {
     return (
       <div>
         <Navbar color="dark" dark expand="md" className="fixed-top">
-          <NavbarBrand>ProjetoProgDDD.React</NavbarBrand>
+          <NavbarBrand id= "NomeProg">ProjetoProgDDD.React</NavbarBrand>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            <NavItem id="buttons1">
               <Button onClick={this.professorClick} className="button" color="link">Professores</Button>
             </NavItem>
-            <NavItem>
+            <NavItem id="buttons2">
               <Button onClick={this.sobreClick} className="button" color="link">Sobre</Button>
             </NavItem>
           </Nav>

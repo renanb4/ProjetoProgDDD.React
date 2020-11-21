@@ -18,7 +18,7 @@ export default class Professor extends Component {
         return (
             <div id="lista">
                 <Table dark striped hover responsive>
-                    <thead>
+                    <thead id= "HeaderTable">
                         <tr>
                             <th>Id</th>
                             <th>Nome</th>
@@ -31,11 +31,11 @@ export default class Professor extends Component {
                     {dados.map(usr => (
                         <tbody>
                             <tr id={usr.Id} key={usr.Id}>
-                                <th scope="row">{usr.Id}</th>
-                                <td className="nome">{usr.Nome}</td>
-                                <td className="email">{usr.Email}</td>
-                                <td className="ra">{usr.Ra}</td>
-                                <td className="senha">{usr.Senha}</td>
+                                <th>{usr.Id}</th>
+                                <td id="NomeTabela">{usr.Nome}</td>
+                                <td>{usr.Email}</td>
+                                <td>{usr.Ra}</td>
+                                <td>{usr.Senha}</td>
                             </tr>
                         </tbody>
                     ))}
