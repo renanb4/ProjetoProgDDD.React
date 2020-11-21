@@ -8,14 +8,10 @@
   }
 }
 
-.button {
-  color: #FFF;
+.link {
+  color: #fff;
 }
 
-#buttons1 :hover {
-  color: rgb(158, 159, 255);
-}
-
-#buttons2 :hover {
+.link:hover {
   color: rgb(158, 159, 255);
 }
