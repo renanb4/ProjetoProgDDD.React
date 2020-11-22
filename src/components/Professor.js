@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import requisicao from "../Api";
 import "../style/Geral.css";
-import { Table } from "reactstrap";
+import { Table, Button } from "reactstrap";
 
 export default class Professor extends Component {
   state = {
@@ -17,11 +17,17 @@ export default class Professor extends Component {
     const { dados } = this.state;
     return (
       <div id="lista">
+        <div id="divBotao">
+          <Button id="botao" href="/cadastrar">
+            Cadastrar
+          </Button>
+        </div>
         <Table dark striped hover responsive>
           <thead id="headerTable">
             <tr>
               <th>Id</th>
               <th>Nome</th>
+              <th>Nascimento</th>
               <th>E-Mail</th>
               <th>R.A</th>
               <th>Senha</th>
@@ -29,10 +35,11 @@ export default class Professor extends Component {
           </thead>
 
           {dados.map((usr) => (
-            <tbody>
-              <tr id={usr.Id} key={usr.Id}>
+            <tbody key={usr.Id}>
+              <tr>
                 <th>{usr.Id}</th>
                 <td id="tableNome">{usr.Nome}</td>
+                <td>{usr.Nascimento}</td>
                 <td>{usr.Email}</td>
                 <td>{usr.Ra}</td>
                 <td>{usr.Senha}</td>

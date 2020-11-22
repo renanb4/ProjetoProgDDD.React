@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 import "../style/NavMenu.css";
 import "../style/Geral.css";
 
-class NavMenu extends Component {
+export default class NavMenu extends Component {
   render() {
     return (
       <div>
@@ -26,5 +26,3 @@ class NavMenu extends Component {
     );
   }
 }
-
-export default NavMenu;
